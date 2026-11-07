@@ -2,7 +2,6 @@ let cloudOneX = 50
 let cloudTwoX = 45
 let cloudThreeX = 60
 
-
 function setup() {
   createCanvas(600, 600);
     rectMode(CENTER)
@@ -44,6 +43,7 @@ push()
   rect(0,800,1200,600)
 pop()
 
+//bunny!!
   //tummy and darkest part
 push()
   noStroke()
