@@ -3,8 +3,6 @@
 
 //1 animation that moves something across the screen and loops
   //clouds
-//1 figure/element that follows the mouse made of at least 3 shapes
-  //carrot
 
 
 function setup() {
@@ -300,6 +298,17 @@ push()
   line(225,230,130,180)
 pop()
 
-//flower
+//carrot mouse-follow
+push()
+  fill(207, 115, 45)
+  triangle(mouseX-5,mouseY-14, mouseX+15, mouseY+13, mouseX-5,mouseY+17)
+pop()
+push()
+ stroke(26, 46, 20)
+ strokeWeight(2)
+ line(mouseX+16, mouseY+21, mouseX+5, mouseY+13)
+ line(mouseX, mouseY+24, mouseX+5, mouseY+13)
+ line(mouseX+8, mouseY+26, mouseX+5, mouseY+13)
+pop()
 
 }
