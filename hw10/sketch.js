@@ -1,8 +1,6 @@
-//sketch is your main.lua file
-//commenting is w 2 forward slashes!
-
-//1 animation that moves something across the screen and loops
-  //clouds
+let cloudOneX = 50
+let cloudTwoX = 45
+let cloudThreeX = 60
 
 
 function setup() {
@@ -13,7 +11,32 @@ function setup() {
 
 function draw() {
   background(185, 200, 230);
-  
+
+//cloud1
+beginShape()
+  fill(225, 238, 252)
+  ellipse(cloudOneX, 370, 130,80)
+  ellipse(cloudOneX+50, 390, 100,40)
+  ellipse(cloudOneX-50, 380, 90,45)
+endShape()
+cloudOneX = frameCount%width
+//cloud2
+beginShape()
+  fill(225, 238, 252)
+  ellipse(cloudTwoX-100, 200, 100,70)
+  ellipse(cloudTwoX-60, 210, 100,40)
+  ellipse(cloudTwoX-120, 220, 90,45)
+endShape()
+cloudTwoX = frameCount%width
+//cloud2
+beginShape()
+  fill(225, 238, 252)
+  ellipse(cloudThreeX+100, 70, 130,80)
+  ellipse(cloudThreeX+150, 90, 100,40)
+  ellipse(cloudThreeX+50, 80, 90,45)
+endShape()
+cloudThreeX = frameCount%width
+
 //ground
 push()
   noStroke()
@@ -310,5 +333,4 @@ push()
  line(mouseX, mouseY+24, mouseX+5, mouseY+13)
  line(mouseX+8, mouseY+26, mouseX+5, mouseY+13)
 pop()
-
 }
